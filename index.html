@@ -21,9 +21,8 @@
     <title>Blog The Lengend of Zelda: Tears of the Kingdom</title>
   </head>
   <style>
-
     * {
-  box-sizing: border-box;
+      box-sizing: border-box;
     }
     .foto-principal {
       opacity: 0.7;
@@ -63,7 +62,13 @@
     }
 
     body {
-      background-color: rgb(16, 16, 16);
+      background: #0f0f0f;
+      background: linear-gradient(
+        90deg,
+        rgba(15, 15, 15, 1) 0%,
+        rgba(36, 36, 36, 1) 49%,
+        rgba(20, 20, 20, 1) 92%
+      );
       margin: 0%;
     }
 
@@ -78,11 +83,13 @@
     .tarjeta-zora {
       display: inline-block;
       border: 2px solid #af904f;
-      padding: 5px;
+      padding: 10px;
       border-radius: 8px;
       text-align: center;
-      width: 200px;
-      margin-left: 320px;
+      width: 300px;
+
+      margin-left: 500px;
+      margin-bottom: 20px;
     }
 
     .titulo-zora {
@@ -92,19 +99,22 @@
     }
 
     .tarjeta-zora img {
-      width: 100%;
+      width: 80%;
       height: 250px;
       display: block;
       margin-top: 10px;
+      margin-right: 10px;
+      object-fit: cover; /* Estoo es para q la imagen no se deforme, sino q quede en buena proporcion*/
     }
 
     .tarjeta-orni {
       display: inline-block;
       border: 2px solid #af904f;
-      padding: 5px;
+      padding: 10px;
       border-radius: 8px;
       text-align: center;
-      width: 200px;
+      width: 300px;
+
       margin-left: 30px;
     }
 
@@ -115,20 +125,21 @@
     }
 
     .tarjeta-orni img {
-      width: 100%;
+      width: 85%;
       height: 250px;
       display: block;
       margin-top: 10px;
+      object-fit: cover;
     }
 
     .tarjeta-goron {
       display: inline-block;
       border: 2px solid #af904f;
-      padding: 5px;
+      padding: 10px;
       border-radius: 8px;
       text-align: center;
-      width: 200px;
-      margin-left: 30px;
+      width: 300px;
+      margin-left: 500px;
     }
 
     .titulo-goron {
@@ -138,19 +149,21 @@
     }
 
     .tarjeta-goron img {
-      width: 100%;
+      width: 90%;
       height: 250px;
       display: block;
       margin-top: 10px;
+      object-fit: cover;
+      margin-left: 10px;
     }
 
     .tarjeta-gerudo {
       display: inline-block;
       border: 2px solid #af904f;
-      padding: 5px;
+      padding: 10px;
       border-radius: 8px;
       text-align: center;
-      width: 200px;
+      width: 300px;
       margin-left: 30px;
     }
 
@@ -161,10 +174,30 @@
     }
 
     .tarjeta-gerudo img {
-      width: 100%;
+      width: 50%;
       height: 250px;
       display: block;
       margin-top: 10px;
+      object-fit: cover;
+      margin-left: 80px;
+    }
+
+    .resaltado-parrafos {
+      font-family: "Lexend", sans-serif;
+      color: #d2ae5f;
+      font-weight: 600; /* Me permite engrosar la fuentee*/
+    }
+
+    .texto-zora,
+    .texto-orni,
+    .texto-gerudo,
+    .texto-goron {
+      font-family: "Lexend", sans-serif;
+      color: #ffffff;
+      font-size: 14px;
+      margin: 0;
+      text-align: center;
+      margin-top: 5px;
     }
   </style>
   <body>
@@ -206,23 +239,79 @@
       <div class="tarjeta-zora">
         <h3 class="titulo-zora">Zora</h3>
         <img src="zora.png" alt="Descripción" width="20%" />
+        <p class="texto-zora">
+          Habitantes de las regiones acuáticas, conocidos por su nado elegante y
+          su dominio del agua.
+        </p>
       </div>
 
       <div class="tarjeta-orni">
         <h3 class="titulo-orni">Orni</h3>
         <img src="orni.png" alt="Descripción" width="30%" />
+        <p class="texto-orni">
+          Guerreros del cielo que habitan en las cumbres nevadas, maestros del
+          arco y el vuelo.
+        </p>
       </div>
 
-      <div class="tarjeta-goron">
-        <h3 class="titulo-goron">Goron</h3>
-        <img src="goron.png" alt="Descripción" width="30%" />
-      </div>
+      <div>
+        <div class="tarjeta-goron">
+          <h3 class="titulo-goron">Goron</h3>
+          <img src="goron.png" alt="Descripción" width="30%" />
+          <p class="texto-goron">
+            Robustos seres de piedra que viven en volcanes, famosos por su
+            fuerza y resistencia extrema.
+          </p>
+        </div>
 
-      <div class="tarjeta-gerudo">
-        <h3 class="titulo-gerudo">Gerudo</h3>
-        <img src="gerudo.png" alt="Descripción" width="30%" />
+        <div class="tarjeta-gerudo">
+          <h3 class="titulo-gerudo">Gerudo</h3>
+          <img src="gerudo.png" alt="Descripción" width="30%" />
+          <p class="texto-gerudo">
+            Hábiles guerreras del desierto con una cultura única basada en el
+            honor y el combate.
+          </p>
+        </div>
       </div>
-
     </div>
+    <h2>HABILIDADES ANCESTRALES</h2>
+    <p>
+      El nuevo brazo de Link le otorga capacidades que desafían las leyes de la
+      física, permitiendo una libertad creativa sin precedentes en la saga.
+    </p>
+
+    <p>
+      <span class="resaltado-parrafos">Ultramano</span>: Permite manipular y
+      pegar casi cualquier objeto del mundo. Es la base de la construcción,
+      permitiéndote crear desde botes sencillos hasta máquinas de guerra
+      complejas uniendo materiales y piezas tecnológicas.
+    </p>
+
+    <p>
+      <span class="resaltado-parrafos">Combinación</span>: Te permite fusionar
+      tu arma, escudo o flechas con cualquier material del suelo o de tu
+      inventario. Esto aumenta el daño, la durabilidad y añade efectos
+      especiales.
+    </p>
+
+    <p>
+      <span class="resaltado-parrafos">Infiltracion</span>: Es el fin de las
+      escaladas tediosas. Si tienes un techo encima, Link puede atravesarlo
+      verticalmente para aparecer en la cima de montañas, edificios o cuevas,
+      siempre que la superficie sea plana
+    </p>
+
+    <p>
+      <span class="resaltado-parrafos">Retroceso</span>: Selecciona un objeto en
+      movimiento y haz que retroceda en el tiempo siguiendo su trayectoria
+      original.
+    </p>
+
+    <p>
+      <span class="resaltado-parrafos">Generador de esquemas</span>: Una
+      habilidad de apoyo que registra tus construcciones favoritas hechas con la
+      Ultramano. Permite reconstruirlas al instante sin tener que unir las
+      piezas una por una manualmente
+    </p>
   </body>
 </html>
