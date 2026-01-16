@@ -24,6 +24,7 @@
     * {
       box-sizing: border-box;
     }
+
     .foto-principal {
       opacity: 0.7;
     }
@@ -102,7 +103,8 @@
       display: block;
       margin-top: 10px;
       margin-right: 10px;
-      object-fit: cover; /* Estoo es para q la imagen no se deforme, sino q quede en buena proporcion*/
+      object-fit: cover;
+      /* Estoo es para q la imagen no se deforme, sino q quede en buena proporcion*/
     }
 
     .tarjeta-orni {
@@ -182,7 +184,8 @@
     .resaltado-parrafos {
       font-family: "Lexend", sans-serif;
       color: #d2ae5f;
-      font-weight: 600; /* Me permite engrosar la fuentee*/
+      font-weight: 700;
+      /* Me permite engrosar la fuentee*/
     }
 
     .texto-zora,
@@ -198,11 +201,32 @@
     }
 
     .centrado-tarjetas {
-  text-align: center; /*  Centra todo lo de adentro */
-  width: 100%;        /* Ocupa todo el ancho de la pantalla */
-}
+      text-align: center;
+      /*  Centra todo lo de adentro */
+      width: 100%;
+      /* Ocupa todo el ancho de la pantalla */
+    }
 
+    .trailer {
+      text-align: center;
+    }
+
+    .texto-trailer h2 {
+      margin-left: 0;
+
+      text-align: center;
+    }
+
+    .linea {
+      height: 1px;
+      background: #af904f;
+    margin-left: 320px;
+    margin-right: 320px;
+    margin-top: 50px;
+    }
+    
   </style>
+
   <body>
     <div>
       <img class="foto-principal" src="zelda1.jpg" alt="" width="100%" />
@@ -239,44 +263,45 @@
 
       <h2>TRIBUS DE HYRULE</h2>
 
-      <div class="centrado-tarjetas">  <!-- Meti todo en un div para poder centrarlo en Css, pq sino no se centra -->
-      <div class="tarjeta-zora">
-        <h3 class="titulo-zora">Zora</h3>
-        <img src="zora.png" alt="Descripción" width="20%" />
-        <p class="texto-zora">
-          Habitantes de las regiones acuáticas, conocidos por su nado elegante y
-          su dominio del agua.
-        </p>
-      </div>
-
-      <div class="tarjeta-orni">
-        <h3 class="titulo-orni">Orni</h3>
-        <img src="orni.png" alt="Descripción" width="30%" />
-        <p class="texto-orni">
-          Guerreros del cielo que habitan en las cumbres nevadas, maestros del
-          arco y el vuelo.
-        </p>
-      </div>
-
-      <div>
-        <div class="tarjeta-goron">
-          <h3 class="titulo-goron">Goron</h3>
-          <img src="goron.png" alt="Descripción" width="30%" />
-          <p class="texto-goron">
-            Robustos seres de piedra que viven en volcanes, famosos por su
-            fuerza y resistencia extrema.
+      <div class="centrado-tarjetas">
+        <!-- Meti todo en un div para poder centrarlo en Css, pq sino no se centra -->
+        <div class="tarjeta-zora">
+          <h3 class="titulo-zora">Zora</h3>
+          <img src="zora.png" alt="Descripción" width="20%" />
+          <p class="texto-zora">
+            Habitantes de las regiones acuáticas, conocidos por su nado elegante
+            y su dominio del agua.
           </p>
         </div>
 
-        <div class="tarjeta-gerudo">
-          <h3 class="titulo-gerudo">Gerudo</h3>
-          <img src="gerudo.png" alt="Descripción" width="30%" />
-          <p class="texto-gerudo">
-            Hábiles guerreras del desierto con una cultura única basada en el
-            honor y el combate.
+        <div class="tarjeta-orni">
+          <h3 class="titulo-orni">Orni</h3>
+          <img src="orni.png" alt="Descripción" width="30%" />
+          <p class="texto-orni">
+            Guerreros del cielo que habitan en las cumbres nevadas, maestros del
+            arco y el vuelo.
           </p>
         </div>
-      </div>
+
+        <div>
+          <div class="tarjeta-goron">
+            <h3 class="titulo-goron">Goron</h3>
+            <img src="goron.png" alt="Descripción" width="30%" />
+            <p class="texto-goron">
+              Robustos seres de piedra que viven en volcanes, famosos por su
+              fuerza y resistencia extrema.
+            </p>
+          </div>
+
+          <div class="tarjeta-gerudo">
+            <h3 class="titulo-gerudo">Gerudo</h3>
+            <img src="gerudo.png" alt="Descripción" width="30%" />
+            <p class="texto-gerudo">
+              Hábiles guerreras del desierto con una cultura única basada en el
+              honor y el combate.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -319,5 +344,20 @@
       Ultramano. Permite reconstruirlas al instante sin tener que unir las
       piezas una por una manualmente
     </p>
+
+    <div class="linea"></div>
+
+    <div class="texto-trailer"><h2>TRAILER</h2></div>
+
+    <div class="trailer">
+      <iframe
+        src="https://www.youtube.com/embed/uHGShqcAHlQ"
+        frameborder="0"
+        width="700px"
+        height="400px "
+        allowfullscreen
+      >
+      </iframe>
+    </div>
   </body>
 </html>
