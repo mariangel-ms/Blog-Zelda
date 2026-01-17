@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -18,11 +18,9 @@
       rel="stylesheet"
     />
 
-  
     <title>Blog The Lengend of Zelda: Tears of the Kingdom</title>
 
-    <link rel="icon" type="image/png" href="trifuerza.png">
-
+    <link rel="icon" type="image/png" href="trifuerza.png" />
   </head>
   <style>
     * {
@@ -30,7 +28,7 @@
     }
 
     .foto-principal {
-      opacity: 0.7;
+      opacity: 0.6;
     }
 
     h1 {
@@ -107,8 +105,8 @@
       display: block;
       margin-top: 10px;
       margin-right: 10px;
-      object-fit: cover;
-      /* Estoo es para q la imagen no se deforme, sino q quede en buena proporcion*/
+      object-fit: cover;  /* Estoo es para q la imagen no se deforme, sino q quede en buena proporcion*/
+
     }
 
     .tarjeta-orni {
@@ -188,8 +186,7 @@
     .resaltado-parrafos {
       font-family: "Lexend", sans-serif;
       color: #d2ae5f;
-      font-weight: 700;
-      /* Me permite engrosar la fuentee*/
+      font-weight: 700; /* Me permite engrosar la fuentee*/
     }
 
     .texto-zora,
@@ -206,9 +203,8 @@
 
     .centrado-tarjetas {
       text-align: center;
-      /*  Centra todo lo de adentro */
-      width: 100%;
-      /* Ocupa todo el ancho de la pantalla */
+      width: 100%; /* Ocupa todo el ancho de la pantalla */
+   
     }
 
     .trailer {
@@ -225,11 +221,27 @@
     .linea {
       height: 1px;
       background: #af904f;
-    margin-left: 320px;
-    margin-right: 320px;
-    margin-top: 50px;
+      margin-left: 320px;
+      margin-right: 320px;
+      margin-top: 50px;
     }
 
+    /* ESTO ES PARA Q LAS TARJETITAS SE ELEVEN CUANDO SE PASE EL CURSOR */
+
+    .tarjeta-zora:hover,
+    .tarjeta-orni:hover,
+    .tarjeta-goron:hover,
+    .tarjeta-gerudo:hover {
+      transform: translateY(-10px); /* La tarjeta sube 10 píxeles */
+      background: #312c21;
+    }
+
+    .tarjeta-zora,
+    .tarjeta-orni,
+    .tarjeta-goron,
+    .tarjeta-gerudo {
+      transition: all 0.3s ease; /* Esto hace que el movimiento sea suave y no de golpe, asi queda mas cool */
+    }
   </style>
 
   <body>
@@ -244,6 +256,22 @@
         Nintendo. Lanzado en mayo de 2023 para la consola Nintendo Switch, es la
         secuela directa del revolucionario Breath of the Wild (2017).
       </p>
+
+  <div class="linea"></div>
+
+      <h2>UN REINO SIN LÍMITES</h2>
+      <p>
+        A diferencia de su predecesor, Tears of the Kingdom expande el mundo de
+        Hyrule verticalmente. La aventura ahora se desarrolla en tres planos
+        distintos: las misteriosas
+        <span class="resaltado-parrafos">Islas Celestiales</span> que flotan
+        entre las nubes, la
+        <span class="resaltado-parrafos">Superficie</span> transformada por
+        extraños sucesos, y el vasto y peligroso
+        <span class="resaltado-parrafos">Subsuelo</span>, un mundo subterráneo
+        lleno de oscuridad y tesoros antiguos.
+      </p>
+
 
       <h2>HISTORIA</h2>
 
@@ -267,6 +295,15 @@
       </p>
 
       <h2>TRIBUS DE HYRULE</h2>
+
+    <div class="centrado-tarjetas"></div>
+
+      <p>
+        Desde tiempos inmemoriales, las grandes razas de Hyrule han jurado
+        proteger sus tierras. En esta nueva era, Link debe reencontrarse con
+        estos aliados ancestrales para forjar el vínculo que salvará al reino de
+        su inminente destrucción.
+      </p>
 
       <div class="centrado-tarjetas">
         <!-- Meti todo en un div para poder centrarlo en Css, pq sino no se centra -->
@@ -364,6 +401,5 @@
       >
       </iframe>
     </div>
-
   </body>
 </html>
