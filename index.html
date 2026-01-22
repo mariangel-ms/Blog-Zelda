@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,235 +22,18 @@
     <title>Blog The Lengend of Zelda: Tears of the Kingdom</title>
 
     <link rel="icon" type="image/png" href="trifuerza.png" />
+
+    <link rel="stylesheet" href="styles.css">
   </head>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    .foto-principal {
-      opacity: 0.6;
-    }
-
-    h1 {
-      font-family: "Lexend", sans-serif;
-      color: #dcba70;
-      text-align: center;
-      top: 32%;
-      margin: 0;
-      text-shadow: 2px 2px 8px rgba(200, 163, 85, 0.5);
-      font-size: 50px;
-      position: absolute;
-      margin-left: 320px;
-      margin-right: 320px;
-    }
-
-    .parrafo1 {
-      font-family: "Lexend", sans-serif;
-      font-optical-sizing: auto;
-      font-weight: weight;
-      font-style: normal;
-      text-align: center;
-      color: rgb(91, 91, 91);
-      margin-left: 320px;
-      margin-right: 340px;
-      margin-top: 40px;
-      font-size: 15px;
-    }
-
-    h2 {
-      font-family: "Lexend", sans-serif;
-      color: #d2ae5f;
-      margin-left: 320px;
-      margin-top: 50px;
-    }
-
-    body {
-      background: #0f0f0f;
-      background: linear-gradient(
-        90deg,
-        rgba(15, 15, 15, 1) 0%,
-        rgba(36, 36, 36, 1) 49%,
-        rgba(20, 20, 20, 1) 92%
-      );
-      margin: 0%;
-    }
-
-    p {
-      font-family: "Lexend", sans-serif;
-      color: rgb(255, 255, 255);
-      margin-left: 320px;
-      margin-right: 320px;
-      font-size: 18px;
-    }
-
-    .tarjeta-zora {
-      display: inline-block;
-      border: 2px solid #af904f;
-      padding: 10px;
-      border-radius: 8px;
-      text-align: center;
-      width: 300px;
-      margin-bottom: 20px;
-    }
-
-    .titulo-zora {
-      color: #af904f;
-      margin: 0;
-      font-family: "Lexend", sans-serif;
-    }
-
-    .tarjeta-zora img {
-      width: 80%;
-      height: 250px;
-      display: block;
-      margin-top: 10px;
-      margin-right: 10px;
-      object-fit: cover;  /* Estoo es para q la imagen no se deforme, sino q quede en buena proporcion*/
-
-    }
-
-    .tarjeta-orni {
-      display: inline-block;
-      border: 2px solid #af904f;
-      padding: 10px;
-      border-radius: 8px;
-      text-align: center;
-      width: 300px;
-
-      margin-left: 30px;
-    }
-
-    .titulo-orni {
-      color: #af904f;
-      margin: 0;
-      font-family: "Lexend", sans-serif;
-    }
-
-    .tarjeta-orni img {
-      width: 85%;
-      height: 250px;
-      display: block;
-      margin-top: 10px;
-      object-fit: cover;
-    }
-
-    .tarjeta-goron {
-      display: inline-block;
-      border: 2px solid #af904f;
-      padding: 10px;
-      border-radius: 8px;
-      text-align: center;
-      width: 300px;
-    }
-
-    .titulo-goron {
-      color: #af904f;
-      margin: 0;
-      font-family: "Lexend", sans-serif;
-    }
-
-    .tarjeta-goron img {
-      width: 90%;
-      height: 250px;
-      display: block;
-      margin-top: 10px;
-      object-fit: cover;
-      margin-left: 10px;
-    }
-
-    .tarjeta-gerudo {
-      display: inline-block;
-      border: 2px solid #af904f;
-      padding: 10px;
-      border-radius: 8px;
-      text-align: center;
-      width: 300px;
-      margin-left: 30px;
-    }
-
-    .titulo-gerudo {
-      color: #af904f;
-      margin: 0;
-      font-family: "Lexend", sans-serif;
-    }
-
-    .tarjeta-gerudo img {
-      width: 50%;
-      height: 250px;
-      display: block;
-      margin-top: 10px;
-      object-fit: cover;
-      margin-left: 80px;
-    }
-
-    .resaltado-parrafos {
-      font-family: "Lexend", sans-serif;
-      color: #d2ae5f;
-      font-weight: 700; /* Me permite engrosar la fuentee*/
-    }
-
-    .texto-zora,
-    .texto-orni,
-    .texto-gerudo,
-    .texto-goron {
-      font-family: "Lexend", sans-serif;
-      color: #ffffff;
-      font-size: 14px;
-      margin: 0;
-      text-align: center;
-      margin-top: 5px;
-    }
-
-    .centrado-tarjetas {
-      text-align: center;
-      width: 100%; /* Ocupa todo el ancho de la pantalla */
-   
-    }
-
-    .trailer {
-      text-align: center;
-      margin-bottom: 50px;
-    }
-
-    .texto-trailer h2 {
-      margin-left: 0;
-
-      text-align: center;
-    }
-
-    .linea {
-      height: 1px;
-      background: #af904f;
-      margin-left: 320px;
-      margin-right: 320px;
-      margin-top: 50px;
-    }
-
-    /* ESTO ES PARA Q LAS TARJETITAS SE ELEVEN CUANDO SE PASE EL CURSOR */
-
-    .tarjeta-zora:hover,
-    .tarjeta-orni:hover,
-    .tarjeta-goron:hover,
-    .tarjeta-gerudo:hover {
-      transform: translateY(-10px); /* La tarjeta sube 10 píxeles */
-      background: #312c21;
-    }
-
-    .tarjeta-zora,
-    .tarjeta-orni,
-    .tarjeta-goron,
-    .tarjeta-gerudo {
-      transition: all 0.3s ease; /* Esto hace que el movimiento sea suave y no de golpe, asi queda mas cool */
-    }
-  </style>
+  
 
   <body>
     <div>
+      <div>
       <img class="foto-principal" src="zelda1.jpg" alt="" width="100%" />
 
       <h1>THE LEGEND OF ZELDA: TEARS OF THE KINGDOM</h1>
-
+</div>
       <p class="parrafo1">
         The Legend of Zelda: Tears of the Kingdom (abreviado frecuentemente como
         TotK) es la decimonovena entrega de la aclamada serie de videojuegos de
@@ -298,7 +82,7 @@
 
     <div class="centrado-tarjetas"></div>
 
-      <p>
+      <p class="parrafo-tribus">
         Desde tiempos inmemoriales, las grandes razas de Hyrule han jurado
         proteger sus tierras. En esta nueva era, Link debe reencontrarse con
         estos aliados ancestrales para forjar el vínculo que salvará al reino de
@@ -400,6 +184,13 @@
         allowfullscreen
       >
       </iframe>
+
+    <p class="parrafo-2">
+       Creado por <a href="https://github.com/mariangel-ms" class="resaltado-creador">Mariangel Martinez</a>
+      </p>
+
+    
+      <p class="parrafo-2">Pagina oficial <a href="https://www.nintendo.com/es-es/Juegos/Juegos-de-Nintendo-Switch/The-Legend-of-Zelda-Tears-of-the-Kingdom-1576884.html?srsltid=AfmBOopO2fw5pu5YrnP-1cx8sUM1CKFvHKdS_48yCfQs_1oMkPcVm9Kf" class="resaltado-creador">AQUI</a></p>
     </div>
   </body>
 </html>
