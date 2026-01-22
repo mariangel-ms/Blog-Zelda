@@ -1,0 +1,228 @@
+
+body {
+      background: #0f0f0f;
+      background: linear-gradient(
+        90deg,
+        rgb(0, 0, 0) 0%,
+        rgb(26, 25, 25) 49%,
+        rgb(0, 0, 0) 92%
+      );
+      margin: 0%;
+    }
+
+    .foto-principal {
+      opacity: 0.5;
+    }
+
+    h1 {
+      font-family: "Lexend", sans-serif;
+      color: #dcba70;
+      text-align: center;
+      top: 30%;
+      margin: 0;
+      text-shadow: 2px 2px 8px rgba(216, 175, 86, 0.641);
+      font-size: 70px;
+      position: absolute;
+      margin-left: 320px;
+      margin-right: 320px;
+    }
+
+    .parrafo1 {
+      font-family: "Lexend", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: weight;
+      font-style: normal;
+      text-align: center;
+      color: rgb(91, 91, 91);
+      margin-left: 320px;
+      margin-right: 340px;
+      margin-top: 40px;
+      font-size: 15px;
+    }
+
+    h2 {
+      font-family: "Lexend", sans-serif;
+      color: #d2ae5f;
+      margin-left: 320px;
+      margin-top: 50px;
+    }
+
+    
+    p {
+      font-family: "Lexend", sans-serif;
+      color: rgb(255, 255, 255);
+      margin-left: 320px;
+      margin-right: 320px;
+      font-size: 18px;
+    }
+
+    .tarjeta-zora {
+      display: inline-block;
+      border: 2px solid #af904f;
+      padding: 10px;
+      border-radius: 8px;
+      text-align: center;
+      width: 300px;
+      margin-bottom: 20px;
+    }
+
+    .titulo-zora {
+      color: #af904f;
+      margin: 0;
+      font-family: "Lexend", sans-serif;
+    }
+
+    .tarjeta-zora img {
+      width: 80%;
+      height: 250px;
+      display: block;
+      margin-top: 10px;
+      margin-right: 10px;
+      object-fit: cover;  /* Estoo es para q la imagen no se deforme, sino q quede en buena proporcion*/
+    }
+
+    .tarjeta-orni {
+      display: inline-block;
+      border: 2px solid #af904f;
+      padding: 10px;
+      border-radius: 8px;
+      text-align: center;
+      width: 300px;
+
+      margin-left: 30px;
+    }
+
+    .titulo-orni {
+      color: #af904f;
+      margin: 0;
+      font-family: "Lexend", sans-serif;
+    }
+
+    .tarjeta-orni img {
+      width: 85%;
+      height: 250px;
+      display: block;
+      margin-top: 10px;
+      object-fit: cover;
+    }
+
+    .tarjeta-goron {
+      display: inline-block;
+      border: 2px solid #af904f;
+      padding: 10px;
+      border-radius: 8px;
+      text-align: center;
+      width: 300px;
+    }
+
+    .titulo-goron {
+      color: #af904f;
+      margin: 0;
+      font-family: "Lexend", sans-serif;
+    }
+
+    .tarjeta-goron img {
+      width: 90%;
+      height: 250px;
+      display: block;
+      margin-top: 10px;
+      object-fit: cover;
+      margin-left: 10px;
+    }
+
+    .tarjeta-gerudo {
+      display: inline-block;
+      border: 2px solid #af904f;
+      padding: 10px;
+      border-radius: 8px;
+      text-align: center;
+      width: 300px;
+      margin-left: 30px;
+    }
+
+    .titulo-gerudo {
+      color: #af904f;
+      margin: 0;
+      font-family: "Lexend", sans-serif;
+    }
+
+    .tarjeta-gerudo img {
+      width: 50%;
+      height: 250px;
+      display: block;
+      margin-top: 10px;
+      object-fit: cover;
+      margin-left: 80px;
+    }
+
+    .resaltado-parrafos {
+      font-family: "Lexend", sans-serif;
+      color: #d2ae5f;
+      font-weight: 700; /* Me permite engrosar la fuentee*/
+    }
+
+    .texto-zora,
+    .texto-orni,
+    .texto-gerudo,
+    .texto-goron {
+      font-family: "Lexend", sans-serif;
+      color: #ffffff;
+      font-size: 14px;
+      margin: 0;
+      text-align: center;
+      margin-top: 5px;
+    }
+
+    .centrado-tarjetas {
+      text-align: center;
+    }
+
+    .trailer {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .texto-trailer h2 {
+      margin-left: 0;
+      text-align: center;
+    }
+
+    .linea {
+      height: 1px;
+      background: #af904f;
+      margin-left: 320px;
+      margin-right: 320px;
+      margin-top: 50px;
+    }
+
+    /* ESTO ES PARA Q LAS TARJETITAS SE ELEVEN CUANDO SE PASE EL CURSOR */
+
+    .tarjeta-zora:hover,
+    .tarjeta-orni:hover,
+    .tarjeta-goron:hover,
+    .tarjeta-gerudo:hover {
+      transform: translateY(-10px); /* La tarjeta sube 10 píxeles */
+      background: #312c21;
+    }
+
+    .tarjeta-zora,
+    .tarjeta-orni,
+    .tarjeta-goron,
+    .tarjeta-gerudo {
+      transition: all 0.3s ease; /* Esto hace que el movimiento sea suave y no de golpe, asi queda mas cool */
+    }
+
+    .resaltado-creador {
+      font-family: "Lexend", sans-serif;
+      color: #d2ae5f;
+      font-weight: 700;
+    }
+
+    .parrafo-2 {
+font-size: 15px;
+color: #c0c0c0;
+    }
+
+    .parrafo-tribus {
+      margin-bottom: 40px;
+    }
