@@ -10,6 +10,13 @@ body {
       margin: 0%;
     }
 
+    .contenedor-foto {
+position: relative;
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+    }
+
     .foto-principal {
       opacity: 0.5;
     }
@@ -17,14 +24,13 @@ body {
     h1 {
       font-family: "Lexend", sans-serif;
       color: #dcba70;
+      position: absolute;
       text-align: center;
-      top: 30%;
       margin: 0;
       text-shadow: 2px 2px 8px rgba(216, 175, 86, 0.641);
-      font-size: 60px;
-      position: absolute;
-      margin-left: 320px;
-      margin-right: 320px;
+      font-size: 70px;
+      
+
     }
 
     .parrafo1 {
