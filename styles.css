@@ -28,9 +28,8 @@ position: relative;
       text-align: center;
       margin: 0;
       text-shadow: 2px 2px 8px rgba(216, 175, 86, 0.641);
-      font-size: 70px;
-      
-
+      font-size: 60px;
+width: 70%;
     }
 
     .parrafo1 {
@@ -62,7 +61,7 @@ position: relative;
       font-size: 18px;
     }
 
-    .tarjeta-zora {
+    .tarjeta-zora, .tarjeta-orni, .tarjeta-gerudo, .tarjeta-goron {
       display: inline-block;
       border: 2px solid #af904f;
       padding: 10px;
@@ -70,9 +69,10 @@ position: relative;
       text-align: center;
       width: 300px;
       margin-bottom: 20px;
+      margin-left: 25px;
     }
 
-    .titulo-zora {
+    .titulo-zora, .titulo-gerudo, .titulo-goron, .titulo-orni {
       color: #af904f;
       margin: 0;
       font-family: "Lexend", sans-serif;
@@ -87,44 +87,12 @@ position: relative;
       object-fit: cover;  /* Estoo es para q la imagen no se deforme, sino q quede en buena proporcion*/
     }
 
-    .tarjeta-orni {
-      display: inline-block;
-      border: 2px solid #af904f;
-      padding: 10px;
-      border-radius: 8px;
-      text-align: center;
-      width: 300px;
-
-      margin-left: 30px;
-    }
-
-    .titulo-orni {
-      color: #af904f;
-      margin: 0;
-      font-family: "Lexend", sans-serif;
-    }
-
     .tarjeta-orni img {
       width: 85%;
       height: 250px;
       display: block;
       margin-top: 10px;
       object-fit: cover;
-    }
-
-    .tarjeta-goron {
-      display: inline-block;
-      border: 2px solid #af904f;
-      padding: 10px;
-      border-radius: 8px;
-      text-align: center;
-      width: 300px;
-    }
-
-    .titulo-goron {
-      color: #af904f;
-      margin: 0;
-      font-family: "Lexend", sans-serif;
     }
 
     .tarjeta-goron img {
@@ -134,22 +102,6 @@ position: relative;
       margin-top: 10px;
       object-fit: cover;
       margin-left: 10px;
-    }
-
-    .tarjeta-gerudo {
-      display: inline-block;
-      border: 2px solid #af904f;
-      padding: 10px;
-      border-radius: 8px;
-      text-align: center;
-      width: 300px;
-      margin-left: 30px;
-    }
-
-    .titulo-gerudo {
-      color: #af904f;
-      margin: 0;
-      font-family: "Lexend", sans-serif;
     }
 
     .tarjeta-gerudo img {
@@ -225,6 +177,8 @@ position: relative;
     }
 
     .parrafo-2 {
+      display: flex;
+      justify-content: center;
 font-size: 15px;
 color: #c0c0c0;
     }
