@@ -83,7 +83,7 @@ html {
 }
 
 .img-resumen {
-width: 600px;
+width: 700px;
 border-radius: 18px;
 opacity: 0.9;
 }
@@ -153,7 +153,9 @@ p {
   border: 2px solid #af904f;
   padding: 20px;
   border-radius: 15px;
-  width: 410px;
+
+  flex: 1 1 410px;      /* 1: Crece, 1: Se encoge, 350px: tamaño base */
+    max-width: 450px;
 }
 
 .titulo-zora,
@@ -280,11 +282,16 @@ p {
 
 @media screen and (max-width: 767px) {
   .foto-principal {
-    height: 80vh;
+    height: 65vh;
   }
 
   h1 {
-    font-size: 40px;
+    font-size: 35px;
+  }
+
+.parrafo1 {
+    font-size: 13px;
+    width: 90%;
   }
 
 p {
