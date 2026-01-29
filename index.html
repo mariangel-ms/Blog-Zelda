@@ -21,17 +21,41 @@
 
     <title>Blog The Lengend of Zelda: Tears of the Kingdom</title>
 
-    <link rel="icon" type="image/png" href="trifuerza.png" />
+    <link rel="icon" type="image/png" href="img/trifuerza.png" />
 
     <link rel="stylesheet" href="styles.css">
   </head>
   
   <body>
-      <div class="contenedor-foto">
-      <img class="foto-principal" src="zelda1.jpg" alt="" width="100%" />
+
+      <div class="contenedor-foto" id="home">
+      <img class="foto-principal" src="img/ganon-y-link.png" alt="" width="70%" />
       <h1>THE LEGEND OF ZELDA: TEARS OF THE KINGDOM</h1>
 </div>
 
+<div class="barra-navegacion">
+  <div id="logo-barra">
+  <img src="img/trifuerza.png" alt="" width="5%">
+</div>
+<div id="botones">
+  
+  <nav>
+    <a href="#home">INICIO</a>
+  </nav>
+  <nav>
+    <a href="#introduccion">INTRODUCCION</a>
+  </nav>
+  <nav>
+    <a href="#habilidades">HABILIDADES</a>
+  </nav>
+  <nav>
+    <a href="#trailer">TRAILER</a>
+  </nav>
+</div>
+
+</div>
+
+<div class="centrado-general">
       <p class="parrafo1">
         The Legend of Zelda: Tears of the Kingdom (abreviado frecuentemente como
         TotK) es la decimonovena entrega de la aclamada serie de videojuegos de
@@ -41,7 +65,7 @@
 
   <div class="linea"></div>
 
-      <h2>UN REINO SIN LÍMITES</h2>
+      <h2 id="introduccion">UN REINO SIN LÍMITES</h2>
       <p>
         A diferencia de su predecesor, Tears of the Kingdom expande el mundo de
         Hyrule verticalmente. La aventura ahora se desarrolla en tres planos
@@ -75,23 +99,23 @@
         antiguas leyendas, sino de la voluntad de su gente para reconstruir el
         futuro.
       </p>
+      <img class="img-resumen" src="img/zelda.jpeg" alt="Descripción" />
 
-      <h2>TRIBUS DE HYRULE</h2>
-
-    <div class="centrado-tarjetas"></div>
-
+      <h2 id="tribus">TRIBUS DE HYRULE</h2>
+</div>
+    
+<div class="centrado-general">
       <p class="parrafo-tribus">
         Desde tiempos inmemoriales, las grandes razas de Hyrule han jurado
         proteger sus tierras. En esta nueva era, Link debe reencontrarse con
         estos aliados ancestrales para forjar el vínculo que salvará al reino de
         su inminente destrucción.
       </p>
-
+</div>
       <div class="centrado-tarjetas">
-        <!-- Meti todo en un div para poder centrarlo en Css, pq sino no se centra -->
         <div class="tarjeta-zora">
           <h3 class="titulo-zora">Zora</h3>
-          <img src="zora.png" alt="Descripción" width="20%" />
+          <img src="img/zora.png" alt="Descripción" />
           <p class="texto-zora">
             Habitantes de las regiones acuáticas, conocidos por su nado elegante
             y su dominio del agua.
@@ -100,17 +124,16 @@
 
         <div class="tarjeta-orni">
           <h3 class="titulo-orni">Orni</h3>
-          <img src="orni.png" alt="Descripción" width="30%" />
+          <img src="img/orni.png" alt="Descripción" />
           <p class="texto-orni">
             Guerreros del cielo que habitan en las cumbres nevadas, maestros del
             arco y el vuelo.
           </p>
         </div>
 
-        <div>
           <div class="tarjeta-goron">
             <h3 class="titulo-goron">Goron</h3>
-            <img src="goron.png" alt="Descripción" width="30%" />
+            <img src="img/goron.png" alt="Descripción" />
             <p class="texto-goron">
               Robustos seres de piedra que viven en volcanes, famosos por su
               fuerza y resistencia extrema.
@@ -119,22 +142,23 @@
 
           <div class="tarjeta-gerudo">
             <h3 class="titulo-gerudo">Gerudo</h3>
-            <img src="gerudo.png" alt="Descripción" width="30%" />
+            <img src="img/gerudo.png" alt="Descripción" />
             <p class="texto-gerudo">
               Hábiles guerreras del desierto con una cultura única basada en el
               honor y el combate.
             </p>
           </div>
-        </div>
       </div>
     </div>
 
-    <h2>HABILIDADES ANCESTRALES</h2>
+    <div class="centrado-general">
+      <div class="habilidades">
+    <h2 id="habilidades">HABILIDADES ANCESTRALES</h2>
     <p>
-      El nuevo brazo de Link le otorga capacidades que desafían las leyes de la
-      física, permitiendo una libertad creativa sin precedentes en la saga.
-    </p>
-
+      El nuevo brazo de Link, imbuido con la esencia del antiguo sabio Rauru,
+       le otorga capacidades que desafían las leyes de la física y trascienden los límites de la lógica. Esta conexión con la tecnología Zonai permite una libertad
+        creativa sin precedentes en la saga, convirtiendo el entorno en un lienzo donde la imaginación es la única herramienta necesaria para superar cualquier obstáculo.
+</p>
     <p>
       <span class="resaltado-parrafos">Ultramano</span>: Permite manipular y
       pegar casi cualquier objeto del mundo. Es la base de la construcción,
@@ -168,13 +192,13 @@
       Ultramano. Permite reconstruirlas al instante sin tener que unir las
       piezas una por una manualmente
     </p>
-
+</div>
     <div class="linea"></div>
-
-    <div class="texto-trailer"><h2>TRAILER</h2></div>
+<div class="centrado-general">
+    <div class="texto-trailer" id="trailer"><h2>TRAILER</h2></div>
 
     <div class="trailer">
-      <iframe
+      <iframe class="trailer-foto"
         src="https://www.youtube.com/embed/uHGShqcAHlQ"
         frameborder="0"
         width="700px"
@@ -183,10 +207,12 @@
       >
       </iframe>
     </div>
+</div>
 
-     <p class="parrafo-2">
-       Creado por: <a href="https://github.com/mariangel-ms" class="resaltado-creador">Mariangel Martinez</a>
-      </p>
-      <p class="parrafo-2">Pagina oficial: <a href="https://www.nintendo.com/es-es/Juegos/Juegos-de-Nintendo-Switch/The-Legend-of-Zelda-Tears-of-the-Kingdom-1576884.html?srsltid=AfmBOopO2fw5pu5YrnP-1cx8sUM1CKFvHKdS_48yCfQs_1oMkPcVm9Kf" class="resaltado-creador"> AQUI</a></p>
+<div class="creador">
+  <span>Creado por: <a href="https://github.com/mariangel-ms" class="resaltado-creador">Mariangel Martinez</a></span>
+        <span class="separador">|</span>
+        <span>Página oficial: <a href="https://www.nintendo.com..." class="resaltado-creador">AQUÍ</a></span>
+        </div>
   </body>
 </html>
