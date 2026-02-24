@@ -15,8 +15,6 @@ body {
 }
 
 html {
-  overflow-x: hidden;
-  width: 100%;
   scroll-behavior: smooth;
   /* Ajusta este valor al alto de tu barra + un extra de cortesía */
   scroll-padding-top: 130px;
@@ -373,3 +371,19 @@ p {
     flex-direction: column;
   }
 }
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .img-resumen {
+    width: 60%;
+  }
+.tarjeta-zora,
+.tarjeta-orni,
+.tarjeta-gerudo,
+.tarjeta-goron {
+  margin: auto;
+}
+.trailer-foto {
+    width:  490px;
+  }
+}
+
