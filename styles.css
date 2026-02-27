@@ -12,8 +12,8 @@ body {
     rgb(0, 0, 0) 92%
   );
   margin: 0%;
-  padding-top: 50px;
 }
+
 
 html {
   scroll-behavior: smooth;
@@ -79,6 +79,7 @@ html {
   width: 100%;
   height: 70vh;
   object-fit: cover;
+  margin-top: 50px;
 }
 
 .img-resumen {
@@ -89,11 +90,11 @@ opacity: 0.9;
 
 h1 {
   font-family: "Lexend", sans-serif;
-  color: #dcba70;
+  color: #ebc677;
   position: absolute;
   text-align: center;
   margin: 0;
-  text-shadow: 2px 2px 8px rgba(216, 175, 86, 0.641);
+  text-shadow: 3px 3px 8px rgba(235, 190, 94, 0.641);
   font-size: 60px;
   width: 70%;
 }
@@ -111,10 +112,10 @@ h1 {
 
 h2 {
   font-family: "Lexend", sans-serif;
-  color: #d2ae5f;
+  color: #ddb764;
   width: 60%;
   font-weight: 600;
-  font-size: 35px;
+  font-size: 45px;
   margin: 0;
   margin-top: 20px;
   text-align: left;
@@ -155,6 +156,13 @@ overflow: hidden;
 flex-direction: column;
 background-color: #0f0f0f;
 }
+
+.seccion-zelda:hover, .seccion-link:hover, .seccion-link:hover, .seccion-ganon:hover {
+  border-color: #ebc677;
+  box-shadow: 0 0 20px rgba(255, 232, 181, 0.397);
+  transition: all 0.4s ease;
+}
+
 
 .informacion-abajo {
   width: 100%;
@@ -258,7 +266,7 @@ width: 100%;
 .titulo-gerudo,
 .titulo-goron,
 .titulo-orni {
-  color: #af904f;
+  color: #cfac5f;
     text-shadow: 6px 1px #dcba7038;
   margin: 0;
   font-family: "Lexend", sans-serif;
@@ -322,13 +330,13 @@ width: 100%;
   margin-top: 40px;
 }
 
-
-
 .tarjeta-zora:hover,
 .tarjeta-orni:hover,
 .tarjeta-goron:hover,
 .tarjeta-gerudo:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
+    border-color: #ebc677;
+  box-shadow: 0 0 20px rgba(255, 232, 181, 0.267);
 }
 
 .tarjeta-zora,
@@ -342,6 +350,7 @@ width: 100%;
   font-family: "Lexend", sans-serif;
   color: #d2ae5f;
   font-weight: 700;
+      text-decoration: none;
 }
 
 .creador {
@@ -350,11 +359,12 @@ width: 100%;
     align-items: center;
     gap: 15px;
     font-family: "Lexend", sans-serif;
-    font-size: 14px;
+    font-size: 18px;
     color: #c0c0c0;
     padding-bottom: 50px;
     padding-top: 30px;
-}
+    transition: all 0.3s ease;
+  }
 
 .parrafo-tribus {
   margin-bottom: 40px;
@@ -376,6 +386,179 @@ width: 100%;
 .parrafo-habilidades p {
   margin: 0;
   width: 60%;
+}
+
+ /* ---------------------------------TRIVIA------------------------------------*/
+.barra-trivia {
+  background: #0f0f0fe5;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 80px;
+  border-bottom: 1px solid #dcba708a;
+  margin: 0;
+}
+
+.titulo-barra-trivia {
+  color: #dbb866;
+  font-size: 50px;
+  font-family: "Lexend", sans-serif;
+font-weight: 700;
+margin: 0;
+}
+
+ .cuadro-trivia{
+  width: 50%;
+  height: auto;
+  display: flex;
+  background: #1d1d1d;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 30px;
+    border: 2px solid #9e8246;
+    position: absolute;
+    top: 20%;
+    left: 25%;
+padding: 40px;
+ }
+
+#pregunta {
+  font-family: "Lexend", sans-serif;
+  color: #ebc064;
+  font-size: 24px;
+font-weight: 600;
+border: #c0c0c0 2px;
+padding-bottom: 20px;
+text-align: center;
+}
+
+.opciones {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.boton{
+    font-family: "Lexend", sans-serif;
+  font-size: 18px;
+  color: #ffffff;
+background: #2c2c2c;
+border: 1px solid #a38848;
+height: 60px;
+width: 95%; 
+  max-width: 95%;
+  border-radius: 10px;
+    transition: all 0.3s ease;
+} 
+
+.boton:hover {
+  background: #977e46;
+  transition: all 0.3s ease;
+   transform: scale(1.03);
+border: 1px solid #ffeabd;
+}
+
+
+.boton-reinicio {
+    width: 150px;
+ padding: 15px;
+  font-family: "Lexend", sans-serif;
+  background: #222222;
+  color: #ffffff;
+  border: 2px solid #b98800d8;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-bottom: 10px;
+        border-radius: 20px;
+}
+
+ .boton-reinicio:hover, .boton-volver:hover {
+  color: #c29d39;
+  transform: scale(1.1);
+}
+
+#resultado {
+  font-family: "Lexend", sans-serif;
+  color: #ffffff;
+  font-size: 24px;
+  text-align: center;
+  max-width: 600px;
+  padding: 30px;
+  line-height: 1.5;
+}
+
+.quitar-todo {
+  display: none;
+}
+
+
+.boton-volver {
+  width: 150px;
+    font-family: "Lexend", sans-serif;
+  font-size: 13px;
+    background: #222222;
+  color: #ffffff;
+ padding: 15px;
+   border: 2px solid #cea639;
+      transition: all 0.3s ease;
+      border-radius: 20px;
+}
+
+.titulo-mensaje {
+    text-shadow: 7px 1px #dcba7038;
+  font-size: 40px;
+  text-align: center;
+ justify-self: center;
+ width: 100%;
+ padding: 0;
+ margin: 0;
+ color: #cfa956;
+font-weight: 700;
+}
+ /* ------------------------------------------------------------------------*/
+ /* ----------------------------Seccion invitacion trivia zelda---------------------------------------*/
+.seccion-trivia{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #0e0e0e;
+  align-items: center;
+  border-bottom: 1px solid #cfa956;
+    border-top: 1px solid #cfa956;
+    padding: 75px;
+    margin-top: 50px;
+}
+
+.titulo-invitacion {
+  text-align: center;
+  font-size: 40px;
+  width: 100%;
+   text-shadow: 7px 1px #dcba7038;
+}
+
+.texto-invitacion {
+  text-align: center;
+}
+
+#boton-trivia {
+  font-size: 16px;
+  border-radius: 25px;
+  padding: 15px;
+background: #bd9b54;
+color: #131313;
+    font-family: "Lexend", sans-serif;
+    font-weight: 700;
+      transition: all 0.3s;
+      border: 1px solid #9b7f44;
+}
+#boton-trivia:hover {
+  background-color: #eec56d;
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 @media screen and (max-width: 767px) {
@@ -495,6 +678,12 @@ margin-top: 10px;
 width: 90%;
  padding: 10px;
  align-self: center;
+}
+
+.cuadro-trivia {
+width: 90%;
+left: 5%;
+top: 15%;
 }
 }
 
