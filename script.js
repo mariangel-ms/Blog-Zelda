@@ -55,6 +55,7 @@ const tercerBoton = document.querySelector("#boton-3");
 const cuartoBoton = document.querySelector("#boton-4");
 const reinicio = document.querySelector(".reinicio");
 const volverPagina = document.querySelector(".volver-pagina");
+const puntajeEntero = document.querySelector(".puntaje")
 
 let indicePregunta = 0;
 let puntajeTotal = 0;
@@ -97,17 +98,10 @@ else {
     resultado.innerHTML = `<h2 class="titulo-mensaje">Aprendiz de Viajero.</h2><br>"Tu aventura ha terminado pronto. Has confiado más en la suerte que en el análisis. Recuerda: en Hyrule, la prudencia vale más que mil espadas."<br><img src="img/trifuerza.png" alt="Trifuerza" width="13%">`;
 }
 
-  const botonReiniciar = document.createElement("button");
-  botonReiniciar.innerText = "REINICIAR";
-  botonReiniciar.classList.add("boton-reinicio");
-  botonReiniciar.onclick = () => location.reload();
-  reinicio.appendChild(botonReiniciar);
+volverPagina.innerHTML = `<a href="index.html"><button class="boton-volver">VOLVER</button></a>`
+reinicio.innerHTML = `<a href="trivia.html"><button class="boton-volver">REINICIAR</button></a>`
 
-  const botonVolverPagina = document.createElement("button");
-  botonVolverPagina.classList.add("boton-volver");
-  botonVolverPagina.innerHTML = "INICIO";
-    botonVolverPagina.onclick = () => window.location.href = "index.html";
-  volverPagina.appendChild(botonVolverPagina);
+puntajeEntero.innerHTML = `<h2 class="puntaje">Tu puntaje total es de: <span class="numero-destacado">${puntajeTotal}</span></h2>`
 }
 
 const primerBotonClick = () => {respuesta(0)};
