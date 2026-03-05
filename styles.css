@@ -392,16 +392,18 @@ width: 100%;
 .body-trivia {
   margin: 0;
   min-height: 100vh;
-  background-color: #000;
-  /* Creamos tres luces de colores Zelda que se mueven */
-  background-image: 
-    radial-gradient(at 20% 20%, rgba(175, 145, 79, 0.223) 0%, transparent 40%),
-    radial-gradient(at 80% 80%, rgba(0, 221, 129, 0.1) 0%, transparent 40%),
-    radial-gradient(at 50% 50%, rgba(20, 20, 20, 1) 0%, #000 100%);
+    display: flex;
+  flex-direction: column;
+  /* Bajamos la opacidad de 0.9 a 0.6 para que se vea el dibujo */
+  background: 
+    radial-gradient(circle, rgba(29, 29, 29, 0.2) 0%, rgba(14, 14, 14, 0.9) 100%),
+    linear-gradient(rgba(14, 14, 14, 0.51), rgba(14, 14, 14, 0.521)), 
+    url('img/trivia2.png'); 
+  
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   background-attachment: fixed;
-display: flex;
-  flex-direction: column; /* Mantiene la barra arriba y el contenido abajo */
-  align-items: center;
 }
 .barra-trivia {
   background: #0f0f0fe5;
@@ -411,40 +413,54 @@ display: flex;
   flex-direction: column;
   width: 100%;
   height: 80px;
-  border-bottom: 1px solid #dcba708a;
+  border-bottom: 1px solid #ab8e3ebc;
   margin: 0;
 }
 
 .titulo-barra-trivia {
-  color: #dbb866;
+  color: #cab05a;
+  text-shadow: 7px 1px #dcba7038;
   font-size: 50px;
   font-family: "Lexend", sans-serif;
 font-weight: 700;
 margin: 0;
 }
 
+#resultado {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
  .cuadro-trivia{
-  width: 50%;
-  height: auto;
-  display: flex;
-  background: #1d1d1d;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 30px;
+  box-shadow: 0 8px 25px #8b713488;
+  width: 95%; 
+    max-width: 850px; 
+    background: #141414;
     border: 2px solid #9e8246;
-    position: absolute;
-display: flex;
-  flex-direction: column;
-  align-items: center;
-justify-self: center;
-margin-top: 30px;
-padding: 40px;
+    border-radius: 25px;
+    padding: 40px;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
  }
+
+.todo {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center; 
+  align-items: center; 
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
 
 #pregunta {
   font-family: "Lexend", sans-serif;
-  color: #ebc064;
-  font-size: 24px;
+  color: #d4d4d4;
+  font-size: 25px;
 font-weight: 600;
 border: #c0c0c0 2px;
 padding-bottom: 20px;
@@ -461,22 +477,22 @@ text-align: center;
 
 .boton{
     font-family: "Lexend", sans-serif;
-  font-size: 18px;
+  font-size: 1.2rem;
   color: #ffffff;
 background: #2c2c2c;
-border: 1px solid #a38848;
+border: 1px solid #ab8e3edf; 
 height: 60px;
 width: 95%; 
-  max-width: 95%;
   border-radius: 10px;
     transition: all 0.3s ease;
+    white-space: normal; 
+    word-wrap: break-word;
 } 
 
 .boton:hover {
-  background: #977e46;
+  background: #cfa241;
   transition: all 0.3s ease;
    transform: scale(1.03);
-border: 1px solid #ffeabd;
 }
 
 
@@ -486,11 +502,11 @@ border: 1px solid #ffeabd;
   font-family: "Lexend", sans-serif;
   background: #222222;
   color: #ffffff;
-  border: 2px solid #b98800d8;
+  border: 2px solid #ab8f43d8;
   cursor: pointer;
   transition: all 0.3s;
-  margin-bottom: 10px;
         border-radius: 20px;
+        margin-top: 20px;
 }
 
 .botones {
@@ -538,8 +554,20 @@ border: 1px solid #ffeabd;
  width: 100%;
  padding: 0;
  margin: 0;
- color: #cfa956;
+ color: #ddbb72;
 font-weight: 700;
+}
+
+.texto-resultado {
+  color: #e0e0e0; /* Un gris muy claro, casi blanco */
+  font-family: "Lexend", sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    max-width: 100%;
+    font-style: italic;
+    text-align: center;
+    justify-self: center;
+    width: 100%;
 }
 
 .puntaje {
@@ -592,6 +620,24 @@ font-weight: 800;
 
 .texto-invitacion {
   text-align: center;
+  max-width: 900px;
+}
+
+.contenedor-progreso {
+    width: 100%;
+    height: 14px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #af904f; 
+    overflow: hidden;
+}
+
+#barra-progreso {
+    width: 0%; 
+    height: 100%;
+    background: linear-gradient(90deg, #bf9947, #dec77f);
+    transition: width 0.4s ease-in-out;
 }
 
 #boton-trivia {
@@ -733,8 +779,11 @@ width: 90%;
 
 .cuadro-trivia {
 width: 90%;
-left: 5%;
-top: 15%;
+padding-bottom: 0;
+padding: 15px;
+}
+.boton {
+  font-size: 15px;
 }
 
 .titulo-invitacion{
@@ -744,6 +793,11 @@ top: 15%;
 .texto-invitacion {
   width: 280px;
 }
+
+.texto-resultado {
+  font-size: 19px;
+}
+
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {

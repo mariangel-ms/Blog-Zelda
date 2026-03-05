@@ -1,47 +1,48 @@
+
 const preguntasTotal = [
   {
-    titulo: "¿Cuál es la forma más rápida de bajar de una montaña muy alta sin sufrir daño?",
+    titulo: "¿Cuál es el destino final de la princesa Zelda para asegurar la derrota del Rey Demonio?",
     opciones: [
-      { texto: "Saltar y esperar caer en el agua", puntos: 7 },
-      { texto: "Equipar un escudo y surfear sobre él", puntos: 8 },
-      { texto: "Usar la paravela para planear suavemente", puntos: 10 },
-      { texto: "Bajar corriendo por la ladera", puntos: 3 }
+      { texto: "Viajar al subsuelo para sellar el Miasma", puntos: 5 },
+      { texto: "Convertirse en un dragón eterno para custodiar la Espada Maestra", puntos: 10 },
+      { texto: "Reunir a los cuatro Sabios en las Islas Celestiales", puntos: 3 },
+      { texto: "Permanecer oculta en el flujo del tiempo para siempre", puntos: 0 }
     ]
   },
   {
-    titulo: "Ves un grupo de Bokoblins descansando cerca de barriles rojos. ¿Qué haces?",
+    titulo: "¿Qué habilidad de Link permite atravesar superficies planas superiores y evitar escaladas?",
     opciones: [
-      { texto: "Disparar una flecha de fuego a los barriles", puntos: 10 },
-      { texto: "Correr y atacar con tu espada", puntos: 5 },
-      { texto: "Lanzar una bomba remota desde lejos", puntos: 8 },
-      { texto: "Pasar de largo sin que te vean", puntos: 4 }
+      { texto: "Retroceso", puntos: 2 },
+      { texto: "Ultramano", puntos: 4 },
+      { texto: "Infiltración", puntos: 10 },
+      { texto: "Combinación", puntos: 0 }
     ]
   },
   {
-    titulo: "¿Qué debes hacer si Link se queda sin energía (estamina) mientras nada?",
+    titulo: "Además de la Superficie y las Islas Celestiales, ¿qué otra región se puede explorar?",
     opciones: [
-      { texto: "Intentar nadar más rápido hacia la orilla", puntos: 0 },
-      { texto: "Flotar quieto hasta que se recupere sola", puntos: 2 },
-      { texto: "Beber un elíptico de velocidad", puntos: 4 },
-            { texto: "Comer un plato que recupere resistencia rápido", puntos: 10 }
+      { texto: "El Reino del Crepúsculo", puntos: 0 },
+      { texto: "El vasto y peligroso Subsuelo", puntos: 10 },
+      { texto: "Las Tierras del Albor", puntos: 5 },
+      { texto: "El Templo del Tiempo", puntos: 3 }
     ]
   },
   {
-   titulo: "Tu arma está a punto de romperse en medio de un combate. ¿Cuál es la mejor solución?",
+    titulo: "¿Qué caracteriza principalmente a la tribu de los Goron en esta era?",
     opciones: [
-      { texto: "Combinarla (Combinación) con una roca o material fuerte", puntos: 10 },
-      { texto: "Seguir golpeando hasta que explote sobre el enemigo", puntos: 6 },
-      { texto: "Guardarla y usar un arco de madera", puntos: 4 },
-      { texto: "Lanzarla directamente a la cabeza del rival", puntos: 8 }
+      { texto: "Su maestría con el arco y el vuelo", puntos: 0 },
+      { texto: "Su cultura basada en el honor y el combate en el desierto", puntos: 5 },
+      { texto: "Su nado elegante y dominio del agua", puntos: 0 },
+      { texto: "Su fuerza y resistencia extrema en regiones volcánicas", puntos: 10 }
     ]
   },
   {
-    titulo: "Quieres cocinar algo rico. ¿Qué pasa si mezclas comida con partes de monstruo?",
+    titulo: "Según las palabras de Link, ¿en qué consiste el verdadero coraje?",
     opciones: [
-      { texto: "Se crea un elíptico de mucha fuerza", puntos: 3 },
-      { texto: "Sale una 'Comida Dubitativa' (muy mala)", puntos: 10 },
-      { texto: "La comida recupera el doble de corazones", puntos: 0 },
-      { texto: "No pasa nada, se cocinan por separado", puntos: 2 }
+      { texto: "En no sentir miedo ante el Rey Demonio", puntos: 0 },
+      { texto: "En la voluntad de seguir adelante cuando todo parece perdido", puntos: 10 },
+      { texto: "En dominar todas las habilidades del brazo de Rauru", puntos: 5 },
+      { texto: "En sacrificar la humanidad por el bien del reino", puntos: 2 }
     ]
   }
 ];
@@ -56,12 +57,20 @@ const cuartoBoton = document.querySelector("#boton-4");
 const reinicio = document.querySelector(".reinicio");
 const volverPagina = document.querySelector(".volver-pagina");
 const puntajeEntero = document.querySelector(".puntaje")
+const barra = document.querySelector("#barra-progreso")
+const barraContenedor = document.querySelector(".contenedor-progreso")
 
 let indicePregunta = 0;
 let puntajeTotal = 0;
 let indiceOpcion = 0;
 
+const actualizarProgreso = () => {
+  let porcentaje = (indicePregunta / preguntasTotal.length) * 100;
+    barra.style.width = porcentaje + "%";
+};
+
 const inicio = () => {
+  actualizarProgreso();
   pregunta.innerText = preguntasTotal[indicePregunta].titulo;
   primerBoton.innerText = preguntasTotal[indicePregunta].opciones[0].texto;
   segundoBoton.innerText = preguntasTotal[indicePregunta].opciones[1].texto;
@@ -84,22 +93,35 @@ const respuesta = (indiceOpcion) => {
 const resultadoFinal = () => {
   opciones.setAttribute("class", "quitar-todo");
   pregunta.setAttribute("class", "quitar-todo");
+barraContenedor.setAttribute("class", "quitar-todo")
 
-  if (puntajeTotal == 50) {
-    resultado.innerHTML = `<h2 class="titulo-mensaje">¡Héroe de Leyenda!</h2><br>"Has alcanzado la sabiduría de la Trifuerza. Tu conocimiento de Hyrule es absoluto y no dejas nada al azar."<br><img src="img/trifuerza.png" alt="Trifuerza" width="13%">`;
-} 
-else if (puntajeTotal >= 40) {
-    resultado.innerHTML = `<h2 class="titulo-mensaje">Criterio de Caballero Real.</h2><br>"Conoces bien las reglas del mundo. Hyrule está a salvo bajo tu estrategia, aunque siempre hay detalles por pulir"<br><img src="img/trifuerza.png" alt="Trifuerza" width="13%">`;
-} 
-else if (puntajeTotal >= 20) {
-    resultado.innerHTML = `<h2 class="titulo-mensaje">Espíritu de Aventurero.</h2><br>"Tienes buen instinto y has sobrevivido, pero tu técnica aún tiene fisuras. La maestría real está en los detalles que hoy pasaste por alto."<br><img src="img/trifuerza.png" alt="Trifuerza" width="13%">`;
-} 
-else {
-    resultado.innerHTML = `<h2 class="titulo-mensaje">Aprendiz de Viajero.</h2><br>"Tu aventura ha terminado pronto. Has confiado más en la suerte que en el análisis. Recuerda: en Hyrule, la prudencia vale más que mil espadas."<br><img src="img/trifuerza.png" alt="Trifuerza" width="13%">`;
-}
+if (puntajeTotal === 50) {
+        resultado.innerHTML = `
+            <h2 class="titulo-mensaje">¡Sabio de las Crónicas!</h2>
+            <p class="texto-resultado">"Has demostrado una atención absoluta. No solo leíste, sino que comprendiste cada secreto del reino. Eres un verdadero guardián de la historia de Hyrule."</p>
+            <img src="img/trifuerza.png" alt="Trifuerza" width="13%">`;
+    } 
+    else if (puntajeTotal >= 35) {
+        resultado.innerHTML = `
+            <h2 class="titulo-mensaje">Explorador Atento.</h2>
+            <p class="texto-resultado">"Tu conocimiento es sólido, pero algunos detalles se te escaparon entre líneas. Un poco más de lectura y alcanzarás la iluminación de los Sabios."</p>
+            <img src="img/trifuerza.png" alt="Trifuerza" width="13%">`;
+    } 
+    else if (puntajeTotal >= 20) {
+        resultado.innerHTML = `
+            <h2 class="titulo-mensaje">Viajero Distraído.</h2>
+            <p class="texto-resultado">"Tienes el espíritu, pero te falta el rigor. En Hyrule, ignorar los detalles de la historia puede ser tan peligroso como un Guardián."</p>
+            <img src="img/trifuerza.png" alt="Trifuerza" width="13%">`;
+    } 
+    else {
+        resultado.innerHTML = `
+            <h2 class="titulo-mensaje">Aprendiz Fugaz.</h2>
+            <p class="texto-resultado">"Parece que pasaste por alto las crónicas. La verdadera fuerza de un héroe reside en su mente. ¡Vuelve al blog y descubre lo que te falta por aprender!"</p>
+            <img src="img/trifuerza.png" alt="Trifuerza" width="13%">`;
+    }
 
 volverPagina.innerHTML = `<a href="index.html"><button class="boton-volver">VOLVER</button></a>`
-reinicio.innerHTML = `<a href="trivia.html"><button class="boton-volver">REINICIAR</button></a>`
+reinicio.innerHTML = `<a href="trivia.html"><button class="boton-reinicio">REINICIAR</button></a>`
 
 puntajeEntero.innerHTML = `<h2 class="puntaje">Tu puntaje total es de: <span class="numero-destacado">${puntajeTotal}</span></h2>`
 }
